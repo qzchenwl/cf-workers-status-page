@@ -10,7 +10,7 @@ import {
 } from './helpers'
 
 function getDate() {
-  return new Date().toISOString().slice(0, 16).replace('T', ' ')
+  return new Date().toISOString().split('T')[0]
 }
 
 export async function processCronTrigger(event) {
